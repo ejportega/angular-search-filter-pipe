@@ -1,0 +1,5 @@
+<input type="text" placeholder="Search..." [(ngModel)]="searchValue">
+ 
+ <ul>
+    <li *ngFor="let product of products$ | async | searchFilter : searchValue : ['title']">{{ product.title }}</li>
+  </ul>
