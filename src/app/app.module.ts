@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgxSearchPipeModule } from 'projects/ngx-search-pipe/src/public-api';
+import { NgxSearchPipeModule } from 'ngx-search-pipe';
 
 @NgModule({
   declarations: [

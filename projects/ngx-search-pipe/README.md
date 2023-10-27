@@ -2,12 +2,15 @@
 
 ## Install
 ```
-npm i ngx-search-filter
+npm i ngx-search-2-pipe
 ```
 
 ```
-yarn add ngx-search-filter
+yarn add ngx-search-2-pipe
 ```
+
+## Demo
+![StackBlitz Demo](https://im4.ezgif.com/tmp/ezgif-4-6f54ae18c8.gif)
 
 ## Usage
 
@@ -44,14 +47,12 @@ And use pipe in your component
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-component',
+  selector: 'app-component',
   template: `
     <div>
         <input type="text" [(ngModel)]="searchValue">
         <div *ngFor = "let item of items | searchFilter : searchValue : ['name']" >
-          <p>
-            {{item.name}}
-          </p>
+          {{item.name}}
         </div>
 
     </div>  
@@ -59,10 +60,14 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  items: string[] = [{ id: 1, name: "archie" }, { id: 2, name: "jake" }, { id: 3, name: "richard" }];
-}
+  items: string[] = [{ id: 1, name: "iPhone 9" }, { id: 2, name: "iPhone X" }, { id: 3, name: "Samsung Universe 9" }, { id: 4, name: "OPPOF19" }, { id: 5, name: "Huawei P30" }, { id: 6, name: "Macbook Pro" }];
+  searchValue: string;
 ```
+
+## Support ngx-search-2-pipe
+
+ngx-search-2-pipe is completely free and open-source. If you find it useful, you can show your support by 🌟 it or sharing it in your social network.
 
 ## License
 
-[MIT](https://tldrlegal.com/license/mit-license) © [EJOrtega](https://github.com/ejportega/ngx-search-filter-pipe)
+[MIT](https://tldrlegal.com/license/mit-license) © [EJOrtega](https://github.com/ejportega/ngx-search-pipe)
