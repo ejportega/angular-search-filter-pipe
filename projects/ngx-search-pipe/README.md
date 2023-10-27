@@ -10,7 +10,7 @@ yarn add ngx-search-2-pipe
 ```
 
 ## Demo
-![StackBlitz Demo](https://im4.ezgif.com/tmp/ezgif-4-6f54ae18c8.gif)
+![StackBlitz Demo](https://i.imgur.com/dkOdzcF.gif)
 
 ## Usage
 
@@ -59,7 +59,7 @@ import { Component } from '@angular/core';
   `
 })
 
-export class AppComponent {ng build 
+export class AppComponent {
   items: string[] = [{ id: 1, name: "iPhone 9" }, { id: 2, name: "iPhone X" }, { id: 3, name: "Samsung Universe 9" }, { id: 4, name: "OPPOF19" }, { id: 5, name: "Huawei P30" }, { id: 6, name: "Macbook Pro" }];
   searchValue: string;
 ```
