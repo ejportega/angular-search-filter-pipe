@@ -1,27 +1,74 @@
-# NgxSearchFilterPipe
+# Angular 16+ Search Filter Pipe
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+Angular pipe that will filters the list of objects based on the filter value and keys provided.
 
-## Development server
+![demo-image](https://i.imgur.com/hAmmM6v.gif)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Install
+```
+npm i ngx-search-2-pipe
+```
 
-## Code scaffolding
+```
+yarn add ngx-search-2-pipe
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Usage
 
-## Build
+Import `NgxSearchPipeModule` to your module
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```typescript 
 
-## Running unit tests
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+import { NgxSearchFilterPipeModule }
 
-## Running end-to-end tests
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgxSearchFilterPipeModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
 
-## Further help
+And use pipe in your component
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-component',
+  template: `
+    <div>
+        <input type="text" [(ngModel)]="searchValue">
+        <div *ngFor = "let item of items | searchFilter : searchValue : ['name']" >
+          {{item.name}}
+        </div>
+
+    </div>  
+  `
+})
+
+export class AppComponent {
+  items: string[] = [{ id: 1, name: "iPhone 9" }, { id: 2, name: "iPhone X" }, { id: 3, name: "Samsung Universe 9" }, { id: 4, name: "OPPOF19" }, { id: 5, name: "Huawei P30" }, { id: 6, name: "Macbook Pro" }];
+  searchValue: string;
+```
+
+## Support ngx-search-2-pipe
+
+ngx-search-2-pipe is completely free and open-source. If you find it useful, you can show your support by 🌟 it or sharing it in your social network.
+
+## License
+
+[MIT](https://tldrlegal.com/license/mit-license) © [EJOrtega](https://github.com/ejportega/ngx-search-pipe)
