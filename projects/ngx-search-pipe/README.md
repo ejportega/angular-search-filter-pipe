@@ -1,5 +1,9 @@
 # Angular 16+ Search Filter Pipe
 
+Angular pipe that will filters the list of objects based on the filter value and keys provided.
+
+![demo-image](https://i.imgur.com/hAmmM6v.gif)
+
 ## Install
 ```
 npm i ngx-search-2-pipe
@@ -8,9 +12,6 @@ npm i ngx-search-2-pipe
 ```
 yarn add ngx-search-2-pipe
 ```
-
-## Demo
-![StackBlitz Demo](https://i.imgur.com/dkOdzcF.gif)
 
 ## Usage
 
