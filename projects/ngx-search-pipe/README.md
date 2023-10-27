@@ -59,7 +59,7 @@ import { Component } from '@angular/core';
   `
 })
 
-export class AppComponent {
+export class AppComponent {ng build 
   items: string[] = [{ id: 1, name: "iPhone 9" }, { id: 2, name: "iPhone X" }, { id: 3, name: "Samsung Universe 9" }, { id: 4, name: "OPPOF19" }, { id: 5, name: "Huawei P30" }, { id: 6, name: "Macbook Pro" }];
   searchValue: string;
 ```
